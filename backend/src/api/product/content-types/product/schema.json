@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "discription": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 5
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Date": {
+      "type": "date",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 20
+    },
+    "amount": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "Size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "large",
+        "xl",
+        "xxl"
+      ],
+      "required": true
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "blue",
+        "red",
+        "black",
+        "purple",
+        "yellow"
+      ]
+    },
+    "AvailableQty": {
+      "required": true,
+      "default": 0,
+      "type": "integer"
+    },
+    "catgory": {
+      "type": "enumeration",
+      "enum": [
+        "T-shirts",
+        "Jeans",
+        "Mug",
+        "Shoes",
+        "Suits"
+      ],
+      "required": true
+    }
+  }
+}
